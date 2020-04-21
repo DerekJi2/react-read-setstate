@@ -21,7 +21,9 @@ class App extends Component {
     return (
       <div>
         <Hello name={this.state.name} />
-        <button onClick={this.onButtonClick}>World</button>
+        <button onClick={this.onButtonClick}>ERROR</button>
+        <button onClick={(e) => this.onButtonClick(e)}>Arrow Function</button>
+        <button onClick={this.onButtonClick.bind(this)}>Bind This</button>
       </div>
     );
   }
